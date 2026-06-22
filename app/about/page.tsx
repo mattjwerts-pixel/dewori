@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Dewori Skin — the story behind our Korean collagen night wrapping mask and nightly glow ritual mission.',
+    'Learn about Dewori Skin — the story behind our Korean collagen night face mask and nightly glow ritual mission.',
 }
 
 const values = [
@@ -63,12 +63,12 @@ export default function AboutPage() {
             <h2 className="heading-display text-3xl text-glow">Where It Started</h2>
             <p className="text-glow/60 leading-relaxed text-lg">
               The idea for Dewori Skin started with a late-night skincare session and a realization:
-              the Korean collagen wrapping masks we had fallen in love with on trips abroad were impossible to
+              the Korean collagen face masks we had fallen in love with on trips abroad were impossible to
               find at home. And when you did find them, they were expensive, hard to stock up on,
               or came in overwhelming variety.
             </p>
             <p className="text-glow/60 leading-relaxed text-lg">
-              We wanted something simple. One mask. Done beautifully. A collagen night wrapping mask with the same
+              We wanted something simple. One mask. Done beautifully. A collagen night face mask with the same
               deep-hydration science that Korean skincare is known for, formulated for a nightly ritual,
               not just a special occasion. And it comes with a professional brush applicator, so every
               application feels intentional.

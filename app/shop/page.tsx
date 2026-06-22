@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Shop',
   description:
-    'Shop Dewori Skin Korean collagen night wrapping masks. Available in Starter, Duo, and Ritual Set bundles.',
+    'Shop Dewori Skin Korean collagen night face masks. Available in Starter, Duo, and Ritual Set bundles.',
 }
 
 async function ProductGrid() {
@@ -79,7 +79,7 @@ export default function ShopPage() {
             The Collection
           </p>
           <h1 className="heading-display text-4xl md:text-5xl text-glow mb-3">
-            Korean Collagen<br className="hidden sm:block" /> Wrapping Masks
+            Korean Collagen<br className="hidden sm:block" /> Face Masks
           </h1>
           <p className="text-glow/50 text-base max-w-md">
             Choose the bundle that fits your ritual. The more masks, the more you save, and the more you glow.

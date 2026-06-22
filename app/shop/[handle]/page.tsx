@@ -95,7 +95,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="lg:pt-2 space-y-6">
             <div>
               <span className="text-amber text-xs font-semibold tracking-widest uppercase">
-                Korean Collagen Night Wrapping Mask
+                Korean Collagen Night Face Mask
               </span>
               <h1 className="heading-display text-3xl md:text-4xl text-glow mt-2 mb-3">
                 {product.title}

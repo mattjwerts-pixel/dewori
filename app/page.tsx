@@ -113,7 +113,7 @@ export default async function HomePage() {
               <span className="italic text-amber">Different.</span>
             </h1>
             <p className="text-glow/60 text-lg leading-relaxed max-w-md mb-8">
-              Korean collagen wrapping mask for your nightly skin ritual. Apply, wait, and peel away to reveal your glow.
+              Korean collagen face mask for your nightly skin ritual. Apply, wait, and peel away to reveal your glow.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link href="/shop" className="w-full sm:w-auto">
