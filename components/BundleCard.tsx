@@ -8,7 +8,6 @@ interface BundleCardProps {
   title: string
   maskCount: number
   price: number
-  pricePerMask: number
   isBestValue?: boolean
   variantId?: string
 }
@@ -17,7 +16,6 @@ export default function BundleCard({
   title,
   maskCount,
   price,
-  pricePerMask,
   isBestValue = false,
   variantId,
 }: BundleCardProps) {
