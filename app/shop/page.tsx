@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import { getProducts } from '@/lib/shopify'
-import ProductCard from '@/components/ProductCard'
+import VariantCard from '@/components/VariantCard'
 import type { Metadata } from 'next'
 
 // Always fetch fresh — no build-time prerender so missing credentials don't break the build
@@ -20,13 +20,16 @@ async function ProductGrid() {
     // Shopify not connected yet — show placeholder state
   }
 
-  if (products.length === 0) {
+  const main = products.find((p) => p.title !== 'Mask') ?? products[0]
+  const variants = main?.variants.edges.map((e) => e.node) ?? []
+
+  if (variants.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
         <div className="text-5xl mb-4">🌸</div>
         <h2 className="font-display text-2xl text-charcoal mb-2">Products Coming Soon</h2>
         <p className="text-warm-gray text-sm max-w-xs">
-          Connect your Shopify store in <code className="bg-warm-gray-light px-1.5 py-0.5 rounded text-xs">.env.local</code> to display products here.
+          Add products to your Shopify store to display them here.
         </p>
       </div>
     )
@@ -34,8 +37,17 @@ async function ProductGrid() {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+      {variants.map((variant, i) => (
+        <VariantCard
+          key={variant.id}
+          variantId={variant.id}
+          title={variant.title.split('/')[0].trim()}
+          price={parseFloat(variant.price.amount)}
+          availableForSale={variant.availableForSale}
+          tubeCount={i + 1}
+          productHandle={main!.handle}
+          isBestValue={variants.length === 3 && i === 1}
+        />
       ))}
     </div>
   )
