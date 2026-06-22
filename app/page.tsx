@@ -15,9 +15,9 @@ type BundleProps = {
 
 // ── Fallback bundles shown before any products exist in Shopify ─────────────
 const fallbackBundles: BundleProps[] = [
-  { title: 'Starter', maskCount: 1, price: 34.99, pricePerMask: 34.99, isBestValue: false, variantId: undefined },
-  { title: 'Duo', maskCount: 2, price: 54.99, pricePerMask: 27.50, isBestValue: true, variantId: undefined },
-  { title: 'Ritual Set', maskCount: 3, price: 74.99, pricePerMask: 25.00, isBestValue: false, variantId: undefined },
+  { title: 'Starter', maskCount: 1, price: 25.99, pricePerMask: 25.99, isBestValue: false, variantId: undefined },
+  { title: 'Duo', maskCount: 2, price: 39.99, pricePerMask: 20.00, isBestValue: true, variantId: undefined },
+  { title: 'Ritual Set', maskCount: 3, price: 54.99, pricePerMask: 18.33, isBestValue: false, variantId: undefined },
 ]
 
 // Extract mask count from a product title, e.g. "Sheet Mask 10 Pack" → 10

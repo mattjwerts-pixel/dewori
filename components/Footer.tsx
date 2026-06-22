@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 const shopLinks = [
   { href: '/shop', label: 'All Masks' },
-  { href: '/shop', label: 'Starter — $34.99' },
-  { href: '/shop', label: 'Duo — $54.99' },
-  { href: '/shop', label: 'Ritual Set — $74.99' },
+  { href: '/shop', label: 'Starter — $25.99' },
+  { href: '/shop', label: 'Duo — $39.99' },
+  { href: '/shop', label: 'Ritual Set — $54.99' },
 ]
 
 const companyLinks = [
