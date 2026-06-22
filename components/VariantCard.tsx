@@ -168,7 +168,7 @@ function TubeSVG({ width = 70, height = 195 }: { width?: number; height?: number
       <text x="35" y="93" textAnchor="middle" fontFamily="Georgia, serif" fontSize="8" fill="white" fontStyle="italic" opacity="0.90">Dewori</text>
       <text x="35" y="104" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="5" fill="white" opacity="0.65" letterSpacing="3">SKIN</text>
       <text x="35" y="116" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="4" fill="white" opacity="0.45" letterSpacing="0.5">COLLAGEN NIGHT</text>
-      <text x="35" y="124" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="4" fill="white" opacity="0.45" letterSpacing="0.5">WRAPPING MASK</text>
+      <text x="35" y="124" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="4" fill="white" opacity="0.45" letterSpacing="0.5">FACE MASK</text>
 
       {/* Bottom crimp / seal */}
       <rect x="6" y="167" width="58" height="18" rx="5" fill="url(#tubeCrimp)" />
