@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------------------
+   CSS custom properties — Dewori Skin design tokens
+   ------------------------------------------------------------------------- */
+:root {
+  --color-cream: #FAF7F2;
+  --color-rose: #D4A5A5;
+  --color-charcoal: #2C2C2C;
+  --color-warm-gray: #8C8C8C;
+}
+
+/* -------------------------------------------------------------------------
+   Base layer — applied globally to all elements
+   ------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Block any component from causing horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings use Playfair Display */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), Georgia, serif;
+    color: var(--color-charcoal);
+    line-height: 1.2;
+  }
+
+  /* Make images responsive by default */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Clean focus ring that matches the brand */
+  *:focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 2px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Component layer — reusable utility classes
+   ------------------------------------------------------------------------- */
+@layer components {
+  /* Page-width container with horizontal padding */
+  .container-base {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section vertical rhythm */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Playfair Display heading shorthand */
+  .heading-display {
+    @apply font-display font-bold tracking-tight;
+  }
+
+  /* Subtle card style used across product and bundle cards */
+  .card-base {
+    @apply bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* Thin divider line in brand color */
+  .divider {
+    @apply border-t border-warm-gray-light;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Utilities layer — one-off helpers
+   ------------------------------------------------------------------------- */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient overlays used on hero and banner sections */
+  .gradient-cream {
+    background: linear-gradient(135deg, #FAF7F2 0%, #F0E8E8 100%);
+  }
+
+  /* Visually hide but keep accessible for screen readers */
+  .sr-only-focusable:focus {
+    @apply not-sr-only;
+  }
+}
