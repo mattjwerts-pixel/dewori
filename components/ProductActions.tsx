@@ -78,7 +78,7 @@ export default function ProductActions({ variants }: ProductActionsProps) {
 
       {/* Upsell nudge */}
       <p className="text-sm text-warm-gray text-center">
-        💧 Free shipping on orders over $30 — add a 5-pack for just $14 more
+        💧 Free shipping on all orders — try the Starter bundle to begin your collagen ritual
       </p>
     </div>
   )

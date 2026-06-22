@@ -69,7 +69,7 @@ export default function BundleCard({
       <h3 className="font-display text-2xl font-bold mb-1">{title}</h3>
 
       <p className={`text-sm mb-4 ${isBestValue ? 'text-rose-light' : 'text-warm-gray'}`}>
-        {maskCount} Korean hydrating sheet masks
+        {maskCount} collagen wrapping mask{maskCount !== 1 ? 's' : ''} + brush applicator
       </p>
 
       <div className="flex items-baseline gap-2 mb-1">

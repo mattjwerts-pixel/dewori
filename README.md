@@ -1,6 +1,6 @@
 # Dewori Skin — Headless Shopify Storefront
 
-A fully custom e-commerce frontend for **Dewori Skin**, a Korean hydrating sheet mask brand. Built with Next.js 14 and connected to Shopify via the Storefront API.
+A fully custom e-commerce frontend for **Dewori Skin**, a Korean collagen night wrapping mask brand. Built with Next.js 14 and connected to Shopify via the Storefront API.
 
 ## Tech Stack
 
@@ -106,9 +106,9 @@ For the bundle model to work, create products in Shopify that represent each pac
 
 | Product title | Handle (URL slug) | Price |
 |---|---|---|
-| Korean Hydrating Sheet Mask — 5 Pack | `sheet-mask-5-pack` | $19.99 |
-| Korean Hydrating Sheet Mask — 10 Pack | `sheet-mask-10-pack` | $29.99 |
-| Korean Hydrating Sheet Mask — 20 Pack | `sheet-mask-20-pack` | $44.99 |
+| Dewori Collagen Night Wrapping Mask — Starter | `collagen-mask-starter` | $34.99 |
+| Dewori Collagen Night Wrapping Mask — Duo | `collagen-mask-duo` | $54.99 |
+| Dewori Collagen Night Wrapping Mask — Ritual Set | `collagen-mask-ritual-set` | $74.99 |
 
 For each product:
 1. Add a product image
@@ -230,7 +230,7 @@ Both variables are server-side only — they are never sent to the browser. Cart
 
 - **Brand name:** Dewori Skin
 - **Tagline:** Your daily glow ritual
-- **Product:** Korean Hydrating Sheet Face Masks
+- **Product:** Korean Collagen Night Wrapping Mask (with brush applicator)
 - **Primary color:** Cream `#FAF7F2`
 - **Accent color:** Dusty Rose `#D4A5A5`
 - **Text:** Charcoal `#2C2C2C`

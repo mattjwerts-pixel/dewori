@@ -23,15 +23,15 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dewori Skin — Korean Hydrating Sheet Masks",
+    default: "Dewori Skin — Korean Collagen Night Wrapping Mask",
     template: "%s | Dewori Skin",
   },
   description:
-    "Your daily glow ritual. Premium Korean hydrating sheet face masks delivered to your door.",
-  keywords: ["Korean skincare", "sheet masks", "hydrating masks", "K-beauty", "Dewori Skin"],
+    "Your nightly glow ritual. Premium Korean collagen night wrapping mask with professional brush applicator.",
+  keywords: ["Korean skincare", "collagen mask", "wrapping mask", "K-beauty", "Dewori Skin", "peel off mask"],
   openGraph: {
-    title: "Dewori Skin — Korean Hydrating Sheet Masks",
-    description: "Your daily glow ritual. Premium Korean hydrating sheet face masks.",
+    title: "Dewori Skin — Korean Collagen Night Wrapping Mask",
+    description: "Your nightly glow ritual. Premium Korean collagen night wrapping mask with professional brush applicator.",
     type: "website",
   },
 };

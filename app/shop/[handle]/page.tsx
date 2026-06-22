@@ -98,7 +98,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="lg:pt-2 space-y-6">
             <div>
               <span className="text-rose text-xs font-semibold tracking-widest uppercase">
-                Korean Hydrating Sheet Mask
+                Korean Collagen Night Wrapping Mask
               </span>
               <h1 className="heading-display text-3xl md:text-4xl text-charcoal mt-2 mb-3">
                 {product.title}
@@ -161,9 +161,9 @@ export default async function ProductPage({ params }: Props) {
               <ol className="space-y-4">
                 {[
                   'Cleanse your face and pat dry.',
-                  'Unfold the mask and apply to your face, aligning the eye and nose holes.',
+                  'Use the included brush applicator to apply an even layer of the collagen mask across your face.',
                   'Leave on for 15–20 minutes and relax.',
-                  'Remove the mask and gently pat the remaining serum into your skin.',
+                  'Slowly peel off the mask and gently pat any remaining serum into your skin.',
                   'Follow with your favourite moisturiser. No rinsing needed.',
                 ].map((step, i) => (
                   <li key={i} className="flex items-start gap-3">

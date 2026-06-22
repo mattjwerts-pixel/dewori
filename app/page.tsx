@@ -15,9 +15,9 @@ type BundleProps = {
 
 // ── Fallback bundles shown before any products exist in Shopify ─────────────
 const fallbackBundles: BundleProps[] = [
-  { title: '5-Pack', maskCount: 5, price: 19.99, pricePerMask: 4.0, isBestValue: false, variantId: undefined },
-  { title: '10-Pack', maskCount: 10, price: 29.99, pricePerMask: 3.0, isBestValue: true, variantId: undefined },
-  { title: '20-Pack', maskCount: 20, price: 44.99, pricePerMask: 2.25, isBestValue: false, variantId: undefined },
+  { title: 'Starter', maskCount: 1, price: 34.99, pricePerMask: 34.99, isBestValue: false, variantId: undefined },
+  { title: 'Duo', maskCount: 2, price: 54.99, pricePerMask: 27.50, isBestValue: true, variantId: undefined },
+  { title: 'Ritual Set', maskCount: 3, price: 74.99, pricePerMask: 25.00, isBestValue: false, variantId: undefined },
 ]
 
 // Extract mask count from a product title, e.g. "Sheet Mask 10 Pack" → 10
@@ -45,19 +45,19 @@ const reviews = [
   {
     name: 'Sarah K.',
     rating: 5,
-    text: "I use these every night before bed. My skin has never looked more hydrated — friends keep asking what I'm doing differently.",
+    text: "I use this every night before bed. My skin has never looked more hydrated — friends keep asking what I'm doing differently.",
     verified: true,
   },
   {
     name: 'Mia T.',
     rating: 5,
-    text: 'The 10-pack is such great value. Each mask feels luxurious, and the serum is so generous. My new self-care ritual.',
+    text: 'The Duo is such great value. Each mask feels luxurious, and the collagen serum is so generous. My new self-care ritual.',
     verified: true,
   },
   {
     name: 'Priya L.',
     rating: 5,
-    text: "Obsessed. I've tried so many sheet masks and these are by far the best. My skin literally glows the next morning.",
+    text: "Obsessed. I've tried so many collagen masks and these are by far the best. My skin literally glows the next morning.",
     verified: true,
   },
 ]
@@ -66,20 +66,20 @@ const steps = [
   {
     icon: '🌿',
     step: '01',
-    title: 'Unfold',
-    description: 'Open the pouch and gently unfold your mask. The generous sizing fits all face shapes.',
+    title: 'Apply',
+    description: 'Use the included brush applicator to apply an even layer of the collagen mask across your face.',
   },
   {
     icon: '💧',
     step: '02',
-    title: 'Apply',
-    description: 'Apply to cleansed skin and smooth out any air pockets. Leave on for 15–20 minutes.',
+    title: 'Wait',
+    description: 'Relax for 15–20 minutes while the collagen formula works deep into your skin.',
   },
   {
     icon: '✨',
     step: '03',
     title: 'Glow',
-    description: 'Remove and gently pat the remaining serum into your skin. No rinsing needed — just glow.',
+    description: 'Slowly peel off the mask and gently pat any remaining serum into your skin. No rinsing needed — just glow.',
   },
 ]
 
@@ -120,8 +120,7 @@ export default async function HomePage() {
               <span className="italic text-rose">Different.</span>
             </h1>
             <p className="text-warm-gray text-lg leading-relaxed max-w-md mb-8">
-              Korean hydrating sheet masks for your daily skin ritual. Nourish, hydrate, and reveal
-              your natural glow — in just 20 minutes.
+              Korean collagen wrapping mask for your nightly skin ritual. Apply, wait, and peel away to reveal your glow.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link href="/shop" className="w-full sm:w-auto">
@@ -235,7 +234,7 @@ export default async function HomePage() {
         <div className="container-base text-center">
           <h2 className="heading-display text-3xl md:text-4xl text-white mb-4">Ready to Glow?</h2>
           <p className="text-warm-gray mb-8 max-w-sm mx-auto">
-            Join thousands of people who have made Korean sheet masks part of their daily ritual.
+            Join thousands of people who have made the Dewori Skin collagen ritual part of their nightly routine.
           </p>
           <Link href="/shop">
             <Button size="lg">Shop the Collection</Button>

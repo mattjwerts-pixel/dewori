@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Dewori Skin — the story behind our Korean hydrating sheet masks and daily glow ritual mission.',
+    'Learn about Dewori Skin — the story behind our Korean collagen night wrapping mask and nightly glow ritual mission.',
 }
 
 const values = [
@@ -67,14 +67,15 @@ export default function AboutPage() {
             <h2 className="heading-display text-3xl text-charcoal">Where It Started</h2>
             <p className="text-warm-gray leading-relaxed">
               The idea for Dewori Skin started with a late-night skincare session and a realization:
-              the Korean sheet masks we had fallen in love with on trips abroad were impossible to
+              the Korean collagen wrapping masks we had fallen in love with on trips abroad were impossible to
               find at home — and when you did find them, they were expensive, hard to stock up on,
               or came in overwhelming variety.
             </p>
             <p className="text-warm-gray leading-relaxed">
-              We wanted something simple. One mask. Done beautifully. Formulated with the same
-              deep-hydration science that Korean skincare is known for — hyaluronic acid, niacinamide,
-              centella asiatica — but made accessible for a daily ritual, not just a special occasion.
+              We wanted something simple. One mask. Done beautifully. A collagen night wrapping mask with the same
+              deep-hydration science that Korean skincare is known for — formulated for a nightly ritual,
+              not just a special occasion. And it comes with a professional brush applicator, so every
+              application feels intentional.
             </p>
             <p className="text-warm-gray leading-relaxed">
               So we made it. Dewori Skin is that mask.
@@ -128,7 +129,7 @@ export default function AboutPage() {
             Start Your Ritual Today
           </h2>
           <p className="text-warm-gray mb-8">
-            Your daily glow ritual is one sheet mask away.
+            Your nightly glow ritual is one collagen mask away.
           </p>
           <Link href="/shop">
             <Button size="lg">Shop the Collection</Button>
