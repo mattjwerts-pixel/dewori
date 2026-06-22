@@ -95,7 +95,14 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="gradient-night overflow-hidden">
+      <section className="gradient-night overflow-hidden relative">
+        {/* Scattered stars */}
+        <TwinkleStar top="12%" left="8%"  size={5} opacity={0.35} />
+        <TwinkleStar top="22%" left="55%" size={4} opacity={0.25} />
+        <TwinkleStar top="8%"  left="78%" size={6} opacity={0.30} />
+        <TwinkleStar top="65%" left="90%" size={4} opacity={0.20} />
+        <TwinkleStar top="80%" left="15%" size={5} opacity={0.25} />
+
         <div className="container-base grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20 md:py-28">
           <div className="flex flex-col items-start">
             <span className="inline-block bg-amber/10 text-amber text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 border border-amber/20">
@@ -229,6 +236,28 @@ export default async function HomePage() {
         </div>
       </section>
     </>
+  )
+}
+
+function TwinkleStar({
+  top, left, size = 5, opacity = 0.3,
+}: { top: string; left: string; size?: number; opacity?: number }) {
+  const half = size / 2
+  return (
+    <svg
+      style={{ position: 'absolute', top, left, opacity, pointerEvents: 'none' }}
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      fill="none"
+      aria-hidden="true"
+    >
+      {/* 4-pointed sparkle */}
+      <path
+        d={`M${half} 0 L${half * 1.15} ${half * 0.85} L${size} ${half} L${half * 1.15} ${half * 1.15} L${half} ${size} L${half * 0.85} ${half * 1.15} L0 ${half} L${half * 0.85} ${half * 0.85} Z`}
+        fill="#E8C49A"
+      />
+    </svg>
   )
 }
 
