@@ -69,12 +69,12 @@ export default function ProductActions({ variants }: ProductActionsProps) {
         {added
           ? '✓ Added to Cart'
           : selected?.availableForSale
-          ? `Add to Cart — ${price}`
+          ? `Add to Cart ${price}`
           : 'Sold Out'}
       </Button>
 
       <p className="text-sm text-glow/40 text-center">
-        🌙 Free shipping on all orders — begin your collagen ritual tonight
+        🌙 Free shipping on all orders. Begin your collagen ritual tonight
       </p>
     </div>
   )

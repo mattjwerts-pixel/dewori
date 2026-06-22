@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 const shopLinks = [
   { href: '/shop', label: 'All Masks' },
-  { href: '/shop', label: 'Starter — $25.99' },
-  { href: '/shop', label: 'Duo — $39.99' },
-  { href: '/shop', label: 'Ritual Set — $54.99' },
+  { href: '/shop', label: 'Starter $25.99' },
+  { href: '/shop', label: 'Duo $39.99' },
+  { href: '/shop', label: 'Ritual Set $54.99' },
 ]
 
 const companyLinks = [
@@ -22,7 +22,7 @@ export default function Footer() {
             <p className="font-display text-2xl font-bold text-glow mb-2">Dewori Skin</p>
             <p className="text-glow/40 text-sm leading-relaxed max-w-xs">
               Your nightly glow ritual. Premium Korean collagen wrapping mask crafted
-              for real results — apply, peel, and reveal your glow.
+              for real results. Apply, peel, and reveal your glow.
             </p>
 
             <div className="flex items-center gap-3 mt-6">

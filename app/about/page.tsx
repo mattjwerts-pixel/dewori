@@ -31,7 +31,7 @@ const values = [
     icon: '✨',
     title: 'Ritual Over Routine',
     description:
-      'Skincare is not a chore — it is a moment for yourself. We design every product to feel like a small luxury.',
+      'Skincare is not a chore. It is a moment for yourself. We design every product to feel like a small luxury.',
   },
 ]
 
@@ -50,7 +50,7 @@ export default function AboutPage() {
           </h1>
           <p className="text-glow/60 text-lg leading-relaxed">
             Dewori Skin was born from a simple belief: the best skincare is the kind you actually do.
-            Not the 12-step routine you save for weekends — the quiet, consistent ritual that becomes
+            Not the 12-step routine you save for weekends. The quiet, consistent ritual that becomes
             the best part of your day.
           </p>
         </div>

@@ -77,7 +77,7 @@ export default function BundleCard({
           loading={isLoading}
           disabled={!variantId}
         >
-          {added ? '✓ Added to Cart' : `Add ${title} — $${price.toFixed(2)}`}
+          {added ? '✓ Added to Cart' : `Add ${title} $${price.toFixed(2)}`}
         </Button>
 
         {!variantId && (

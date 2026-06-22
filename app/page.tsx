@@ -41,7 +41,7 @@ const reviews = [
   {
     name: 'Sarah K.',
     rating: 5,
-    text: "I use this every night before bed. My skin has never looked more hydrated — friends keep asking what I'm doing differently.",
+    text: "I use this every night before bed. My skin has never looked more hydrated. Friends keep asking what I'm doing differently.",
     verified: true,
   },
   {
@@ -75,7 +75,7 @@ const steps = [
     icon: '✨',
     step: '03',
     title: 'Glow',
-    description: 'Slowly peel off the mask and gently pat any remaining serum into your skin. No rinsing needed — just glow.',
+    description: 'Slowly peel off the mask and gently pat any remaining serum into your skin. No rinsing needed, just glow.',
   },
 ]
 

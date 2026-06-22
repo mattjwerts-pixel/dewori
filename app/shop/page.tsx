@@ -82,7 +82,7 @@ export default function ShopPage() {
             Korean Collagen<br className="hidden sm:block" /> Wrapping Masks
           </h1>
           <p className="text-glow/50 text-base max-w-md">
-            Choose the bundle that fits your ritual. The more masks, the more you save — and the more you glow.
+            Choose the bundle that fits your ritual. The more masks, the more you save, and the more you glow.
           </p>
         </div>
       </section>
