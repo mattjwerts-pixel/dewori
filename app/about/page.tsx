@@ -64,12 +64,12 @@ export default function AboutPage() {
             <p className="text-glow/60 leading-relaxed text-lg">
               The idea for Dewori Skin started with a late-night skincare session and a realization:
               the Korean collagen wrapping masks we had fallen in love with on trips abroad were impossible to
-              find at home — and when you did find them, they were expensive, hard to stock up on,
+              find at home. And when you did find them, they were expensive, hard to stock up on,
               or came in overwhelming variety.
             </p>
             <p className="text-glow/60 leading-relaxed text-lg">
               We wanted something simple. One mask. Done beautifully. A collagen night wrapping mask with the same
-              deep-hydration science that Korean skincare is known for — formulated for a nightly ritual,
+              deep-hydration science that Korean skincare is known for, formulated for a nightly ritual,
               not just a special occasion. And it comes with a professional brush applicator, so every
               application feels intentional.
             </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
             Our Mission
           </span>
           <blockquote className="font-display text-2xl md:text-3xl text-glow leading-relaxed italic">
-            &ldquo;To make glowing skin feel effortless — because you deserve a ritual, not a chore.&rdquo;
+            &ldquo;To make glowing skin feel effortless, because you deserve a ritual, not a chore.&rdquo;
           </blockquote>
         </div>
       </section>
