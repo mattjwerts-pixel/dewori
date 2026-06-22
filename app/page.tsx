@@ -246,27 +246,90 @@ function StarIcon() {
 
 function MaskIllustration() {
   return (
-    <div className="relative w-80 h-80">
-      {[...Array(4)].map((_, i) => (
-        <div
-          key={i}
-          className="absolute inset-0 rounded-3xl border-2 border-rose/30 bg-white/60"
-          style={{
-            transform: `rotate(${(i - 1.5) * 6}deg) translateY(${i * 4}px)`,
-            opacity: 1 - i * 0.15,
-            zIndex: 4 - i,
-          }}
-        />
-      ))}
-      <div className="absolute inset-0 rounded-3xl bg-rose/10 border-2 border-rose/40 z-10 flex flex-col items-center justify-center gap-3 overflow-hidden">
-        <div className="relative w-32 h-36">
-          <div className="absolute inset-0 rounded-[40%] border-2 border-rose/40 bg-rose/5" />
-          <div className="absolute top-10 left-4 w-8 h-5 rounded-full bg-cream border border-rose/30" />
-          <div className="absolute top-10 right-4 w-8 h-5 rounded-full bg-cream border border-rose/30" />
-          <div className="absolute top-20 left-1/2 -translate-x-1/2 w-5 h-3 rounded-full bg-cream border border-rose/30" />
-        </div>
-        <span className="font-display text-sm text-rose font-semibold tracking-wide">Dewori Skin</span>
+    <div className="relative w-80 h-80 flex items-center justify-center">
+      {/* Soft glow background circles */}
+      <div className="absolute w-64 h-64 rounded-full bg-rose/10 blur-2xl" />
+      <div className="absolute w-40 h-40 rounded-full bg-rose/15 blur-xl translate-x-8 translate-y-4" />
+
+      {/* Decorative dots */}
+      <div className="absolute top-8 right-12 w-2 h-2 rounded-full bg-rose/40" />
+      <div className="absolute top-16 right-8 w-1.5 h-1.5 rounded-full bg-rose/30" />
+      <div className="absolute bottom-12 left-10 w-2 h-2 rounded-full bg-rose/40" />
+      <div className="absolute bottom-20 left-6 w-1 h-1 rounded-full bg-rose/25" />
+      <div className="absolute top-12 left-14 w-1.5 h-1.5 rounded-full bg-rose/30" />
+
+      {/* Moon crescent — night ritual */}
+      <div className="absolute top-6 left-8 opacity-30">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <path d="M20 14a8 8 0 1 1-8-8 6 6 0 0 0 8 8z" fill="#D4A5A5"/>
+        </svg>
       </div>
+
+      {/* Main product group */}
+      <div className="relative flex items-end gap-4 z-10">
+        {/* Tube */}
+        <svg width="72" height="160" viewBox="0 0 72 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tubeBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#c9919a"/>
+              <stop offset="40%" stopColor="#e8b4bb"/>
+              <stop offset="100%" stopColor="#c9919a"/>
+            </linearGradient>
+            <linearGradient id="tubeCap" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#a87070"/>
+              <stop offset="100%" stopColor="#c9919a"/>
+            </linearGradient>
+          </defs>
+          {/* Cap */}
+          <rect x="24" y="0" width="24" height="14" rx="7" fill="url(#tubeCap)"/>
+          {/* Neck */}
+          <rect x="27" y="12" width="18" height="10" rx="4" fill="#c9919a"/>
+          {/* Body */}
+          <rect x="6" y="20" width="60" height="112" rx="16" fill="url(#tubeBody)"/>
+          {/* Highlight */}
+          <rect x="14" y="28" width="14" height="72" rx="7" fill="white" opacity="0.2"/>
+          {/* Label background */}
+          <rect x="10" y="52" width="52" height="44" rx="6" fill="white" opacity="0.18"/>
+          {/* Brand name */}
+          <text x="36" y="72" textAnchor="middle" fontFamily="Georgia, serif" fontSize="7" fill="white" fontStyle="italic" opacity="0.9">Dewori</text>
+          <text x="36" y="83" textAnchor="middle" fontFamily="Georgia, serif" fontSize="5.5" fill="white" opacity="0.75" letterSpacing="2">SKIN</text>
+          <text x="36" y="93" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="4.5" fill="white" opacity="0.6" letterSpacing="0.5">COLLAGEN NIGHT MASK</text>
+          {/* Bottom crimp */}
+          <rect x="6" y="128" width="60" height="14" rx="4" fill="#c0848c"/>
+          <rect x="12" y="132" width="48" height="6" rx="3" fill="#a87070" opacity="0.6"/>
+          {/* Shine dot */}
+          <circle cx="52" cy="34" r="3" fill="white" opacity="0.3"/>
+        </svg>
+
+        {/* Brush */}
+        <svg width="36" height="140" viewBox="0 0 36 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="brushHandle" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#c9919a"/>
+              <stop offset="100%" stopColor="#e8b4bb"/>
+            </linearGradient>
+          </defs>
+          {/* Handle */}
+          <rect x="13" y="58" width="10" height="78" rx="5" fill="url(#brushHandle)"/>
+          {/* Metal ferrule */}
+          <rect x="12" y="54" width="12" height="8" rx="3" fill="#a87070"/>
+          <rect x="14" y="55" width="8" height="6" rx="2" fill="#c0848c"/>
+          {/* Brush head */}
+          <ellipse cx="18" cy="34" rx="11" ry="22" fill="#f0dfe0"/>
+          {/* Bristle texture */}
+          <ellipse cx="18" cy="28" rx="8" ry="14" fill="#e8d0d2" opacity="0.6"/>
+          <line x1="18" y1="12" x2="18" y2="54" stroke="#d4a5a8" strokeWidth="1" strokeDasharray="2 4" opacity="0.5"/>
+          <line x1="12" y1="18" x2="12" y2="54" stroke="#d4a5a8" strokeWidth="1" strokeDasharray="2 4" opacity="0.4"/>
+          <line x1="24" y1="18" x2="24" y2="54" stroke="#d4a5a8" strokeWidth="1" strokeDasharray="2 4" opacity="0.4"/>
+          {/* Brush tip highlight */}
+          <ellipse cx="18" cy="14" rx="4" ry="5" fill="white" opacity="0.3"/>
+        </svg>
+      </div>
+
+      {/* Bottom label */}
+      <span className="absolute bottom-4 left-1/2 -translate-x-1/2 font-display text-xs text-rose/60 tracking-widest uppercase">
+        Collagen Night Ritual
+      </span>
     </div>
   )
 }
