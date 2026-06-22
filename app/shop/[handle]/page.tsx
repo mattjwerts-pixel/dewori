@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const benefits = [
-  { icon: '💧', label: 'Deep Hydration', detail: 'Hyaluronic acid locks in moisture for 24h' },
-  { icon: '🌿', label: 'Soothing Formula', detail: 'Centella asiatica calms redness and irritation' },
-  { icon: '✨', label: 'Instant Glow', detail: 'Niacinamide brightens and evens skin tone' },
-  { icon: '🛡️', label: 'Barrier Repair', detail: 'Ceramides strengthen your skin barrier overnight' },
+  { icon: '💧', label: 'Deep Hydration', detail: 'Collagen formula locks in moisture overnight for plump, supple skin' },
+  { icon: '🌿', label: 'Soothing Formula', detail: 'Calms redness and irritation while you sleep' },
+  { icon: '✨', label: 'Instant Glow', detail: 'Wake up to brighter, more even skin tone' },
+  { icon: '🛡️', label: '75ml Per Tube', detail: 'Each tube gives approximately 15–20 full-face applications' },
 ]
 
 export default async function ProductPage({ params }: Props) {
@@ -161,10 +161,10 @@ export default async function ProductPage({ params }: Props) {
               <ol className="space-y-4">
                 {[
                   'Cleanse your face and pat dry.',
-                  'Use the included brush applicator to apply an even layer of the collagen mask across your face.',
-                  'Leave on for 15–20 minutes and relax.',
+                  'Use the included brush to apply a thin, even layer of the collagen paste across your face, avoiding the eye area.',
+                  'Leave on for 15–20 minutes (or overnight) until dry.',
                   'Slowly peel off the mask and gently pat any remaining serum into your skin.',
-                  'Follow with your favourite moisturiser. No rinsing needed.',
+                  'Rinse with warm water if needed. One tube gives approximately 15–20 uses.',
                 ].map((step, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="w-6 h-6 bg-rose text-white text-xs font-bold rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">

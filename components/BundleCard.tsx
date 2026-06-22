@@ -69,7 +69,7 @@ export default function BundleCard({
       <h3 className="font-display text-2xl font-bold mb-1">{title}</h3>
 
       <p className={`text-sm mb-4 ${isBestValue ? 'text-rose-light' : 'text-warm-gray'}`}>
-        {maskCount} collagen wrapping mask{maskCount !== 1 ? 's' : ''} + brush applicator
+        {maskCount} tube{maskCount !== 1 ? 's' : ''} (75ml each) + brush applicator
       </p>
 
       <div className="flex items-baseline gap-2 mb-1">
@@ -77,7 +77,7 @@ export default function BundleCard({
       </div>
 
       <p className={`text-xs mb-6 ${isBestValue ? 'text-rose-light' : 'text-warm-gray'}`}>
-        ${pricePerMask.toFixed(2)} per mask
+        ~15–20 uses per tube
       </p>
 
       <div className="mt-auto">
