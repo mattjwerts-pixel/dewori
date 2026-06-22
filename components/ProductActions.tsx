@@ -76,6 +76,9 @@ export default function ProductActions({ variants }: ProductActionsProps) {
       <p className="text-sm text-glow/40 text-center">
         🌙 Free shipping on all orders. Begin your collagen ritual tonight
       </p>
+      <p className="text-xs text-glow/30 text-center">
+        Ships in 12–18 business days
+      </p>
     </div>
   )
 }
