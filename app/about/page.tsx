@@ -38,19 +38,17 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      {/* ------------------------------------------------------------------ */}
-      {/* HERO                                                                 */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="gradient-cream">
+      {/* HERO */}
+      <section className="gradient-night">
         <div className="container-base py-20 md:py-28 max-w-3xl">
-          <span className="inline-block bg-rose/15 text-rose text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6">
+          <span className="inline-block bg-amber/10 text-amber text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 border border-amber/20">
             Our Story
           </span>
-          <h1 className="heading-display text-5xl md:text-6xl text-charcoal mb-6 text-balance">
+          <h1 className="heading-display text-5xl md:text-6xl text-glow mb-6 text-balance">
             Skincare as a<br />
-            <span className="italic text-rose">Daily Ritual.</span>
+            <span className="italic text-amber">Nightly Ritual.</span>
           </h1>
-          <p className="text-warm-gray text-lg leading-relaxed">
+          <p className="text-glow/60 text-lg leading-relaxed">
             Dewori Skin was born from a simple belief: the best skincare is the kind you actually do.
             Not the 12-step routine you save for weekends — the quiet, consistent ritual that becomes
             the best part of your day.
@@ -58,53 +56,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/* BRAND STORY                                                          */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="section-padding bg-white">
+      {/* BRAND STORY */}
+      <section className="section-padding bg-dusk">
         <div className="container-base max-w-3xl">
-          <div className="prose prose-lg max-w-none space-y-6 text-charcoal">
-            <h2 className="heading-display text-3xl text-charcoal">Where It Started</h2>
-            <p className="text-warm-gray leading-relaxed">
+          <div className="space-y-6">
+            <h2 className="heading-display text-3xl text-glow">Where It Started</h2>
+            <p className="text-glow/60 leading-relaxed text-lg">
               The idea for Dewori Skin started with a late-night skincare session and a realization:
               the Korean collagen wrapping masks we had fallen in love with on trips abroad were impossible to
               find at home — and when you did find them, they were expensive, hard to stock up on,
               or came in overwhelming variety.
             </p>
-            <p className="text-warm-gray leading-relaxed">
+            <p className="text-glow/60 leading-relaxed text-lg">
               We wanted something simple. One mask. Done beautifully. A collagen night wrapping mask with the same
               deep-hydration science that Korean skincare is known for — formulated for a nightly ritual,
               not just a special occasion. And it comes with a professional brush applicator, so every
               application feels intentional.
             </p>
-            <p className="text-warm-gray leading-relaxed">
+            <p className="text-glow/60 leading-relaxed text-lg">
               So we made it. Dewori Skin is that mask.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/* MISSION                                                              */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="section-padding bg-charcoal">
+      {/* MISSION */}
+      <section className="section-padding bg-midnight">
         <div className="container-base max-w-3xl text-center">
-          <span className="inline-block text-rose text-xs font-semibold tracking-widest uppercase mb-6">
+          <span className="inline-block text-amber text-xs font-semibold tracking-widest uppercase mb-6">
             Our Mission
           </span>
-          <blockquote className="font-display text-2xl md:text-3xl text-white leading-relaxed italic">
+          <blockquote className="font-display text-2xl md:text-3xl text-glow leading-relaxed italic">
             &ldquo;To make glowing skin feel effortless — because you deserve a ritual, not a chore.&rdquo;
           </blockquote>
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/* VALUES                                                               */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="section-padding bg-cream">
+      {/* VALUES */}
+      <section className="section-padding bg-dusk">
         <div className="container-base">
           <div className="text-center mb-12">
-            <h2 className="heading-display text-3xl md:text-4xl text-charcoal mb-3">
+            <h2 className="heading-display text-3xl md:text-4xl text-glow mb-3">
               What We Stand For
             </h2>
           </div>
@@ -112,23 +104,21 @@ export default function AboutPage() {
             {values.map(({ icon, title, description }) => (
               <div key={title} className="card-base p-6">
                 <div className="text-3xl mb-3">{icon}</div>
-                <h3 className="font-display text-lg font-bold text-charcoal mb-2">{title}</h3>
-                <p className="text-warm-gray text-sm leading-relaxed">{description}</p>
+                <h3 className="font-display text-lg font-bold text-glow mb-2">{title}</h3>
+                <p className="text-glow/50 text-sm leading-relaxed">{description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/* CTA                                                                  */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="section-padding bg-white">
+      {/* CTA */}
+      <section className="section-padding gradient-dusk">
         <div className="container-base text-center max-w-lg">
-          <h2 className="heading-display text-3xl text-charcoal mb-4">
-            Start Your Ritual Today
+          <h2 className="heading-display text-3xl text-glow mb-4">
+            Start Your Ritual Tonight
           </h2>
-          <p className="text-warm-gray mb-8">
+          <p className="text-glow/50 mb-8">
             Your nightly glow ritual is one collagen mask away.
           </p>
           <Link href="/shop">

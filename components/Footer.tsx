@@ -14,19 +14,17 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-white">
+    <footer className="bg-midnight border-t border-white/5">
       <div className="container-base py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
 
-          {/* Brand column — full width on mobile */}
           <div className="col-span-2 md:col-span-2">
-            <p className="font-display text-2xl font-bold text-white mb-2">Dewori Skin</p>
-            <p className="text-warm-gray text-sm leading-relaxed max-w-xs">
-              Your daily glow ritual. Premium Korean collagen wrapping mask crafted
+            <p className="font-display text-2xl font-bold text-glow mb-2">Dewori Skin</p>
+            <p className="text-glow/40 text-sm leading-relaxed max-w-xs">
+              Your nightly glow ritual. Premium Korean collagen wrapping mask crafted
               for real results — apply, peel, and reveal your glow.
             </p>
 
-            {/* Social icons — 44px touch targets */}
             <div className="flex items-center gap-3 mt-6">
               <SocialLink href="#" label="Instagram"><InstagramIcon /></SocialLink>
               <SocialLink href="#" label="TikTok"><TikTokIcon /></SocialLink>
@@ -34,9 +32,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Shop links */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-warm-gray mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber/60 mb-4">
               Shop
             </p>
             <ul className="flex flex-col gap-1">
@@ -44,7 +41,7 @@ export default function Footer() {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="block py-2 text-sm text-rose-light hover:text-white transition-colors"
+                    className="block py-2 text-sm text-glow/40 hover:text-amber transition-colors"
                   >
                     {label}
                   </Link>
@@ -53,9 +50,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company links */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-warm-gray mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-amber/60 mb-4">
               Company
             </p>
             <ul className="flex flex-col gap-1">
@@ -63,7 +59,7 @@ export default function Footer() {
                 <li key={label}>
                   <Link
                     href={href}
-                    className="block py-2 text-sm text-rose-light hover:text-white transition-colors"
+                    className="block py-2 text-sm text-glow/40 hover:text-amber transition-colors"
                   >
                     {label}
                   </Link>
@@ -73,12 +69,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="divider mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 border-white/10">
-          <p className="text-xs text-warm-gray">
+        <div className="divider mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-glow/25">
             © {new Date().getFullYear()} Dewori Skin. All rights reserved.
           </p>
-          <p className="text-xs text-warm-gray">Powered by Korean skincare science 🌿</p>
+          <p className="text-xs text-glow/25">Crafted for your nightly ritual 🌙</p>
         </div>
       </div>
     </footer>
@@ -100,8 +95,7 @@ function SocialLink({
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      // w-11 h-11 = 44px — meets touch target minimum
-      className="w-11 h-11 flex items-center justify-center rounded-full border border-white/20 text-warm-gray hover:text-white hover:border-white/60 transition-colors"
+      className="w-11 h-11 flex items-center justify-center rounded-full border border-white/10 text-glow/30 hover:text-amber hover:border-amber/30 transition-colors"
     >
       {children}
     </a>

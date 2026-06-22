@@ -31,22 +31,21 @@ export default function ProductActions({ variants }: ProductActionsProps) {
 
   return (
     <div className="space-y-5">
-      {/* Variant picker — shown only when there are multiple sizes */}
       {variants.length > 1 && (
         <div>
-          <p className="text-sm font-semibold text-charcoal mb-3">Select Size</p>
+          <p className="text-sm font-semibold text-glow mb-3">Select Size</p>
           <div className="flex flex-wrap gap-2">
             {variants.map((v) => (
               <button
                 key={v.id}
                 onClick={() => setSelectedId(v.id)}
                 disabled={!v.availableForSale}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium border-2 transition-all min-h-[44px] ${
+                className={`px-5 py-2.5 rounded-full text-sm font-medium border transition-all min-h-[44px] ${
                   v.id === selectedId
-                    ? 'bg-rose border-rose text-white'
+                    ? 'bg-amber border-amber text-midnight'
                     : v.availableForSale
-                    ? 'bg-white border-warm-gray-light text-charcoal hover:border-rose'
-                    : 'bg-warm-gray-light border-warm-gray-light text-warm-gray cursor-not-allowed line-through'
+                    ? 'bg-transparent border-white/10 text-glow/70 hover:border-amber/50 hover:text-amber'
+                    : 'bg-white/5 border-white/5 text-glow/20 cursor-not-allowed line-through'
                 }`}
               >
                 {v.title}
@@ -56,12 +55,10 @@ export default function ProductActions({ variants }: ProductActionsProps) {
         </div>
       )}
 
-      {/* Price display */}
       {selected && (
-        <p className="text-3xl font-bold text-charcoal">{price}</p>
+        <p className="text-3xl font-bold text-glow">{price}</p>
       )}
 
-      {/* Add to cart */}
       <Button
         size="lg"
         className="w-full"
@@ -76,9 +73,8 @@ export default function ProductActions({ variants }: ProductActionsProps) {
           : 'Sold Out'}
       </Button>
 
-      {/* Upsell nudge */}
-      <p className="text-sm text-warm-gray text-center">
-        💧 Free shipping on all orders — try the Starter bundle to begin your collagen ritual
+      <p className="text-sm text-glow/40 text-center">
+        🌙 Free shipping on all orders — begin your collagen ritual tonight
       </p>
     </div>
   )

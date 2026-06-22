@@ -3,7 +3,6 @@ import { getProducts } from '@/lib/shopify'
 import VariantCard from '@/components/VariantCard'
 import type { Metadata } from 'next'
 
-// Always fetch fresh — no build-time prerender so missing credentials don't break the build
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ async function ProductGrid() {
   try {
     products = await getProducts()
   } catch {
-    // Shopify not connected yet — show placeholder state
+    // Shopify not connected — show placeholder state
   }
 
   const main = products.find((p) => p.title !== 'Mask') ?? products[0]
@@ -26,9 +25,9 @@ async function ProductGrid() {
   if (variants.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 text-center">
-        <div className="text-5xl mb-4">🌸</div>
-        <h2 className="font-display text-2xl text-charcoal mb-2">Products Coming Soon</h2>
-        <p className="text-warm-gray text-sm max-w-xs">
+        <div className="text-5xl mb-4">🌙</div>
+        <h2 className="font-display text-2xl text-glow mb-2">Products Coming Soon</h2>
+        <p className="text-glow/40 text-sm max-w-xs">
           Add products to your Shopify store to display them here.
         </p>
       </div>
@@ -56,13 +55,13 @@ async function ProductGrid() {
 function ProductGridSkeleton() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {Array.from({ length: 6 }).map((_, i) => (
+      {Array.from({ length: 3 }).map((_, i) => (
         <div key={i} className="card-base animate-pulse">
-          <div className="aspect-square bg-warm-gray-light" />
+          <div className="aspect-square bg-white/5" />
           <div className="p-4 space-y-3">
-            <div className="h-4 bg-warm-gray-light rounded w-3/4" />
-            <div className="h-3 bg-warm-gray-light rounded w-1/2" />
-            <div className="h-10 bg-warm-gray-light rounded-full mt-4" />
+            <div className="h-4 bg-white/5 rounded w-3/4" />
+            <div className="h-3 bg-white/5 rounded w-1/2" />
+            <div className="h-10 bg-white/5 rounded-full mt-4" />
           </div>
         </div>
       ))}
@@ -74,22 +73,22 @@ export default function ShopPage() {
   return (
     <>
       {/* Page header */}
-      <section className="bg-white border-b border-warm-gray-light">
+      <section className="bg-midnight border-b border-white/5">
         <div className="container-base py-12 md:py-16">
-          <p className="text-rose text-xs font-semibold tracking-widest uppercase mb-3">
+          <p className="text-amber text-xs font-semibold tracking-widest uppercase mb-3">
             The Collection
           </p>
-          <h1 className="heading-display text-4xl md:text-5xl text-charcoal mb-3">
+          <h1 className="heading-display text-4xl md:text-5xl text-glow mb-3">
             Korean Collagen<br className="hidden sm:block" /> Wrapping Masks
           </h1>
-          <p className="text-warm-gray text-base max-w-md">
+          <p className="text-glow/50 text-base max-w-md">
             Choose the bundle that fits your ritual. The more masks, the more you save — and the more you glow.
           </p>
         </div>
       </section>
 
       {/* Product grid */}
-      <section className="section-padding bg-cream">
+      <section className="section-padding bg-dusk">
         <div className="container-base">
           <Suspense fallback={<ProductGridSkeleton />}>
             <ProductGrid />
