@@ -20,25 +20,22 @@ const fallbackBundles: BundleProps[] = [
   { title: 'Ritual Set', maskCount: 3, price: 54.99, pricePerMask: 18.33, isBestValue: false, variantId: undefined },
 ]
 
-// Extract mask count from a product title, e.g. "Sheet Mask 10 Pack" → 10
-function extractMaskCount(title: string): number {
-  const match = title.match(/(\d+)\s*[-–]?\s*[Pp]ack/)
-  return match ? parseInt(match[1]) : 0
-}
-
-// Convert a Shopify product into BundleCard props
-function productToBundleProps(product: ShopifyProduct, isBestValue: boolean) {
-  const price = parseFloat(product.priceRange.minVariantPrice.amount)
-  const maskCount = extractMaskCount(product.title)
-  const packLabel = maskCount > 0 ? `${maskCount}-Pack` : product.title
-  return {
-    title: packLabel,
-    maskCount: maskCount || 1,
-    price,
-    pricePerMask: maskCount > 0 ? Math.round((price / maskCount) * 100) / 100 : price,
-    isBestValue,
-    variantId: product.variants.edges[0]?.node.id,
-  }
+// Convert a product's variants into bundle cards (one card per variant)
+function variantsToBundles(product: ShopifyProduct): BundleProps[] {
+  const variants = product.variants.edges.map((e) => e.node)
+  return variants.map((variant, i) => {
+    const price = parseFloat(variant.price.amount)
+    const title = variant.title.split('/')[0].trim() // strip "/ United States" DSers suffix
+    const maskCount = i + 1
+    return {
+      title,
+      maskCount,
+      price,
+      pricePerMask: Math.round((price / maskCount) * 100) / 100,
+      isBestValue: variants.length === 3 && i === 1,
+      variantId: variant.id,
+    }
+  })
 }
 
 const reviews = [
@@ -88,17 +85,11 @@ export default async function HomePage() {
   let bundles = fallbackBundles
   try {
     const products = await getProducts()
-    if (products.length > 0) {
-      // Sort cheapest → most expensive so 5-pack, 10-pack, 20-pack are in order
-      const sorted = [...products].sort(
-        (a, b) =>
-          parseFloat(a.priceRange.minVariantPrice.amount) -
-          parseFloat(b.priceRange.minVariantPrice.amount)
-      )
-      // Mark the middle product as Best Value (works for 3 products; otherwise mark none)
-      bundles = sorted.map((product, i) =>
-        productToBundleProps(product, sorted.length === 3 && i === 1)
-      )
+    // Find the main product (ignore any placeholder named "Mask")
+    const main = products.find((p) => p.title !== 'Mask') ?? products[0]
+    if (main) {
+      const variantBundles = variantsToBundles(main)
+      if (variantBundles.length > 0) bundles = variantBundles
     }
   } catch {
     // Keep fallback if Shopify is unreachable
