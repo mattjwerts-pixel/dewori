@@ -77,7 +77,7 @@ export default function BundleCard({
       </div>
 
       <p className={`text-xs mb-6 ${isBestValue ? 'text-rose-light' : 'text-warm-gray'}`}>
-        ~15–20 uses per tube
+        est. ${(price / (maskCount * 17)).toFixed(2)} per use (~15–20 uses per tube)
       </p>
 
       <div className="mt-auto">
