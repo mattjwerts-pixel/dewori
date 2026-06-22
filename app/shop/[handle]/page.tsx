@@ -169,12 +169,6 @@ export default async function ProductPage({ params }: Props) {
             </div>
           </div>
 
-          {product.descriptionHtml && (
-            <div
-              className="mt-12 max-w-4xl mx-auto prose prose-sm prose-invert text-glow/50"
-              dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-            />
-          )}
         </div>
       </section>
     </div>
