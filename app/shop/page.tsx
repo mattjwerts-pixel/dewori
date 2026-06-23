@@ -34,6 +34,9 @@ async function ProductGrid() {
     )
   }
 
+  const images = main?.images.edges.map((e) => e.node) ?? []
+  const featuredImage = main?.featuredImage ?? images[0] ?? null
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {variants.map((variant, i) => (
@@ -46,6 +49,8 @@ async function ProductGrid() {
           tubeCount={i + 1}
           productHandle={main!.handle}
           isBestValue={variants.length === 3 && i === 1}
+          imageUrl={images[i]?.url ?? featuredImage?.url ?? null}
+          imageAlt={images[i]?.altText ?? featuredImage?.altText ?? 'Dewori Collagen Night Face Mask'}
         />
       ))}
     </div>

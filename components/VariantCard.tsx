@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useCart } from '@/lib/cart-context'
 import Button from './Button'
@@ -13,6 +14,8 @@ interface VariantCardProps {
   tubeCount: number
   productHandle: string
   isBestValue?: boolean
+  imageUrl?: string | null
+  imageAlt?: string
 }
 
 export default function VariantCard({
@@ -23,6 +26,8 @@ export default function VariantCard({
   tubeCount,
   productHandle,
   isBestValue = false,
+  imageUrl = null,
+  imageAlt = 'Dewori Collagen Night Face Mask',
 }: VariantCardProps) {
   const { addItem, isLoading } = useCart()
   const [added, setAdded] = useState(false)
@@ -57,17 +62,27 @@ export default function VariantCard({
 
       {/* Image area */}
       <Link href={`/shop/${productHandle}`} className="block relative overflow-hidden">
-        <div className="relative w-full h-72 bg-midnight flex items-end justify-center pb-4 gap-2">
-          {/* Subtle radial glow behind products */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-48 h-48 rounded-full bg-amber/5 blur-2xl" />
+        {imageUrl ? (
+          <div className="relative w-full h-72">
+            <Image
+              src={imageUrl}
+              alt={imageAlt}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
+            />
           </div>
-
-          {Array.from({ length: tubeCount }).map((_, i) => (
-            <TubeSVG key={i} width={tubeW} height={tubeH} />
-          ))}
-          <BrushSVG width={tubeCount === 1 ? 38 : 32} height={tubeH} />
-        </div>
+        ) : (
+          <div className="relative w-full h-72 bg-midnight flex items-end justify-center pb-4 gap-2">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="w-48 h-48 rounded-full bg-amber/5 blur-2xl" />
+            </div>
+            {Array.from({ length: tubeCount }).map((_, i) => (
+              <TubeSVG key={i} width={tubeW} height={tubeH} />
+            ))}
+            <BrushSVG width={tubeCount === 1 ? 38 : 32} height={tubeH} />
+          </div>
+        )}
       </Link>
 
       {/* Info */}
