@@ -29,10 +29,12 @@ export const metadata: Metadata = {
   description:
     "Your nightly glow ritual. Premium Korean collagen night face mask with professional brush applicator.",
   keywords: ["Korean skincare", "collagen mask", "face mask", "K-beauty", "Dewori Skin", "peel off mask"],
+  metadataBase: new URL("https://dewori.store"),
   openGraph: {
     title: "Dewori Skin — Korean Collagen Night Face Mask",
     description: "Your nightly glow ritual. Premium Korean collagen night face mask with professional brush applicator.",
     type: "website",
+    url: "https://dewori.store",
   },
 };
 
