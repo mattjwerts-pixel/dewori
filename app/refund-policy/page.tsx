@@ -92,7 +92,7 @@ export default function RefundPolicyPage() {
             <h2 className="heading-display text-xl text-glow mb-3">Shipping Times</h2>
             <p>
               Our products ship from overseas suppliers with an estimated delivery time of
-              12–18 business days. Shipping delays caused by customs, weather, or carrier
+              3–7 business days. Shipping delays caused by customs, weather, or carrier
               issues are outside our control and do not qualify for a refund on their own.
               If your order has not arrived within 30 business days of your order date,
               please contact us and we will open an investigation with the carrier.

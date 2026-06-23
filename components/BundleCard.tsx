@@ -83,7 +83,7 @@ export default function BundleCard({
         {!variantId && (
           <p className="text-xs text-center mt-2 text-glow/30">Connect Shopify to enable</p>
         )}
-        <p className="text-xs text-center mt-1 text-glow/30">Ships in 12–18 business days</p>
+        <p className="text-xs text-center mt-1 text-glow/30">Ships in 3–7 business days</p>
       </div>
     </div>
   )
