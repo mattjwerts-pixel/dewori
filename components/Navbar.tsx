@@ -35,7 +35,7 @@ export default function Navbar() {
           : 'border-b border-white/5'
       }`}
     >
-      <nav className="container-base flex items-center justify-between h-16 md:h-20">
+      <nav className="container-base flex items-center justify-between h-16 md:h-20" aria-label="Main navigation">
 
         <Link
           href="/"
@@ -52,6 +52,7 @@ export default function Navbar() {
                 className={`text-sm font-medium transition-colors hover:text-amber ${
                   pathname === href ? 'text-amber' : 'text-glow/60'
                 }`}
+                aria-current={pathname === href ? 'page' : undefined}
               >
                 {label}
               </Link>
@@ -62,12 +63,12 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/cart"
-            aria-label={`Cart, ${cartCount} items`}
+            aria-label={`Cart, ${cartCount} item${cartCount !== 1 ? 's' : ''}`}
             className="relative p-2.5 text-glow/60 hover:text-amber transition-colors"
           >
             <CartIcon />
             {cartCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 bg-amber text-midnight text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+              <span aria-hidden="true" className="absolute -top-0.5 -right-0.5 bg-amber text-midnight text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
                 {cartCount > 9 ? '9+' : cartCount}
               </span>
             )}
@@ -78,6 +79,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen((o) => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             {menuOpen ? <XIcon /> : <MenuIcon />}
           </button>
@@ -89,7 +91,7 @@ export default function Navbar() {
           menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <ul className="flex flex-col bg-midnight border-t border-white/5 px-4 pb-4 pt-2 gap-1">
+        <ul id="mobile-menu" className="flex flex-col bg-midnight border-t border-white/5 px-4 pb-4 pt-2 gap-1">
           {navLinks.map(({ href, label }) => (
             <li key={href}>
               <Link
@@ -97,6 +99,7 @@ export default function Navbar() {
                 className={`block py-3 text-base font-medium border-b border-white/5 last:border-0 transition-colors hover:text-amber ${
                   pathname === href ? 'text-amber' : 'text-glow/60'
                 }`}
+                aria-current={pathname === href ? 'page' : undefined}
               >
                 {label}
               </Link>
@@ -110,7 +113,7 @@ export default function Navbar() {
 
 function CartIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
       <line x1="3" y1="6" x2="21" y2="6" />
       <path d="M16 10a4 4 0 0 1-8 0" />
@@ -120,7 +123,7 @@ function CartIcon() {
 
 function MenuIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
       <line x1="3" y1="6" x2="21" y2="6" />
       <line x1="3" y1="12" x2="21" y2="12" />
       <line x1="3" y1="18" x2="21" y2="18" />
@@ -130,7 +133,7 @@ function MenuIcon() {
 
 function XIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+    <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
       <line x1="18" y1="6" x2="6" y2="18" />
       <line x1="6" y1="6" x2="18" y2="18" />
     </svg>

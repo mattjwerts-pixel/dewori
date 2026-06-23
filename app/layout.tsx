@@ -47,9 +47,16 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="antialiased">
         <CartProvider>
+          {/* Skip to main content — ADA/keyboard navigation */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-amber focus:text-midnight focus:px-4 focus:py-2 focus:rounded-full focus:font-medium focus:text-sm"
+          >
+            Skip to main content
+          </a>
           <AnnouncementBar />
           <Navbar />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
         </CartProvider>
       </body>

@@ -39,7 +39,7 @@ export default async function ProductPage({ params }: Props) {
     <div className="bg-midnight min-h-screen">
       {/* Breadcrumb */}
       <div className="container-base py-4">
-        <nav className="flex items-center gap-2 text-xs text-glow/30 min-w-0">
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-glow/30 min-w-0">
           <Link href="/" className="hover:text-amber transition-colors shrink-0">Home</Link>
           <span className="shrink-0">/</span>
           <Link href="/shop" className="hover:text-amber transition-colors shrink-0">Shop</Link>
