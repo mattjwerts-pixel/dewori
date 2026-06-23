@@ -10,6 +10,7 @@ const shopLinks = [
 const companyLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/', label: 'How It Works' },
+  { href: '/refund-policy', label: 'Refund Policy' },
 ]
 
 export default function Footer() {
