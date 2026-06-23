@@ -73,7 +73,7 @@ export default function Footer() {
           <p className="text-xs text-glow/25">
             © {new Date().getFullYear()} Dewori Skin. All rights reserved.
           </p>
-          <p className="text-xs text-glow/25">Crafted for your nightly ritual 🌙</p>
+          <p className="text-xs text-glow/25">dewori.store</p>
         </div>
       </div>
     </footer>
