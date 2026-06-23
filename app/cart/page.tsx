@@ -183,13 +183,7 @@ export default function CartPage() {
                 </div>
                 <div className="flex justify-between text-glow/50">
                   <span>Shipping</span>
-                  <span className="text-glow font-medium">
-                    {parseFloat(subtotal.amount) >= 30 ? (
-                      <span className="text-amber font-semibold">Free</span>
-                    ) : (
-                      'Calculated at checkout'
-                    )}
-                  </span>
+                  <span className="text-amber font-semibold">Free</span>
                 </div>
               </div>
 
@@ -198,11 +192,6 @@ export default function CartPage() {
                 <span className="text-lg">{formattedSubtotal}</span>
               </div>
 
-              {parseFloat(subtotal.amount) < 30 && (
-                <p className="text-xs text-glow/40 bg-amber/5 border border-amber/10 rounded-xl px-3 py-2 text-center">
-                  Add ${(30 - parseFloat(subtotal.amount)).toFixed(2)} more for free shipping 🌙
-                </p>
-              )}
 
               <a href={cart!.checkoutUrl} className="block w-full">
                 <Button size="lg" className="w-full">

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dewori Logo Options</title>
+  <style>
+    body { background: #141320; display: flex; gap: 60px; padding: 60px; align-items: center; justify-content: center; font-family: Georgia, serif; }
+    .option { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    p { color: #F5EDD8; opacity: 0.5; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Option 1: D Monogram -->
+  <div class="option">
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg1" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#1C1A2E"/>
+          <stop offset="100%" stop-color="#0A0A15"/>
+        </radialGradient>
+        <linearGradient id="gold1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#E8C49A"/>
+          <stop offset="100%" stop-color="#A87850"/>
+        </linearGradient>
+      </defs>
+      <!-- Circle background -->
+      <circle cx="100" cy="100" r="100" fill="url(#bg1)"/>
+      <!-- Subtle ring -->
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#C9956A" stroke-width="0.8" opacity="0.3"/>
+      <!-- D letterform -->
+      <text x="100" y="128" text-anchor="middle" font-family="Georgia, serif" font-size="110" font-style="italic" fill="url(#gold1)">D</text>
+    </svg>
+    <p>Option 1 — Monogram</p>
+  </div>
+
+  <!-- Option 2: Crescent + D -->
+  <div class="option">
+    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg2" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#1C1A2E"/>
+          <stop offset="100%" stop-color="#0A0A15"/>
+        </radialGradient>
+        <linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#E8C49A"/>
+          <stop offset="100%" stop-color="#A87850"/>
+        </linearGradient>
+      </defs>
+      <!-- Circle background -->
+      <circle cx="100" cy="100" r="100" fill="url(#bg2)"/>
+      <!-- Subtle ring -->
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#C9956A" stroke-width="0.8" opacity="0.3"/>
+      <!-- Crescent moon -->
+      <circle cx="100" cy="52" r="22" fill="#C9956A" opacity="0.90"/>
+      <circle cx="110" cy="46" r="17" fill="#0A0A15"/>
+      <!-- D letterform -->
+      <text x="100" y="145" text-anchor="middle" font-family="Georgia, serif" font-size="88" font-style="italic" fill="url(#gold2)">D</text>
+      <!-- Small dots -->
+      <circle cx="68" cy="58" r="2" fill="#C9956A" opacity="0.5"/>
+      <circle cx="138" cy="72" r="1.5" fill="#C9956A" opacity="0.35"/>
+      <circle cx="62" cy="80" r="1" fill="#C9956A" opacity="0.25"/>
+    </svg>
+    <p>Option 2 — Crescent + D</p>
+  </div>
+
+</body>
+</html>

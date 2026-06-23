@@ -112,7 +112,7 @@ export default async function ProductPage({ params }: Props) {
             {/* Trust badges */}
             <div className="flex flex-wrap gap-4 pt-2 border-t border-white/5">
               {[
-                { icon: '🚚', text: 'Free shipping over $30' },
+                { icon: '🚚', text: 'Free shipping on all orders' },
                 { icon: '↩️', text: '30-day returns' },
                 { icon: '🔒', text: 'Secure checkout' },
               ].map(({ icon, text }) => (
