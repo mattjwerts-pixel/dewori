@@ -93,10 +93,6 @@ export default function VariantCard({
               {title}
             </h3>
           </Link>
-          <p className="text-glow/50 text-sm mt-1">{tubeLabel}</p>
-          <p className="text-glow/40 text-xs mt-0.5">
-            est. ${(price / (tubeCount * 17)).toFixed(2)} per use
-          </p>
         </div>
 
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mt-auto pt-2 border-t border-white/5">
