@@ -1,102 +1,54 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Button from '@/components/Button'
-import BundleCard from '@/components/BundleCard'
-import { getProducts } from '@/lib/shopify'
-import type { ShopifyProduct } from '@/types/shopify'
-
-type BundleProps = {
-  title: string
-  maskCount: number
-  price: number
-  pricePerMask: number
-  isBestValue: boolean
-  variantId: string | undefined
-}
-
-const fallbackBundles: BundleProps[] = [
-  { title: 'Starter', maskCount: 1, price: 25.99, pricePerMask: 25.99, isBestValue: false, variantId: undefined },
-  { title: 'Duo', maskCount: 2, price: 39.99, pricePerMask: 20.00, isBestValue: true, variantId: undefined },
-  { title: 'Ritual Set', maskCount: 3, price: 54.99, pricePerMask: 18.33, isBestValue: false, variantId: undefined },
-]
-
-function variantsToBundles(product: ShopifyProduct): BundleProps[] {
-  const variants = product.variants.edges.map((e) => e.node)
-  return variants.map((variant, i) => {
-    const price = parseFloat(variant.price.amount)
-    const title = variant.title.split('/')[0].trim()
-    const maskCount = i + 1
-    return {
-      title,
-      maskCount,
-      price,
-      pricePerMask: Math.round((price / maskCount) * 100) / 100,
-      isBestValue: variants.length === 3 && i === 1,
-      variantId: variant.id,
-    }
-  })
-}
 
 const reviews = [
   {
     name: 'Sarah K.',
     rating: 5,
-    text: "I use this every night before bed. My skin has never looked more hydrated. Friends keep asking what I'm doing differently.",
+    text: "I use Dewori products every night before bed. My skin has never looked more hydrated. Friends keep asking what I'm doing differently.",
     verified: true,
   },
   {
     name: 'Mia T.',
     rating: 5,
-    text: 'The Duo is such great value. Each mask feels luxurious, and the collagen serum is so generous. My new self-care ritual.',
+    text: 'Finally a skincare brand that gets the nighttime ritual. Everything feels luxurious and my skin shows it every morning.',
     verified: true,
   },
   {
     name: 'Priya L.',
     rating: 5,
-    text: "Obsessed. I've tried so many collagen masks and these are by far the best. My skin literally glows the next morning.",
+    text: "Obsessed. I've tried so many Korean skincare products and Dewori is by far the best. My skin literally glows the next morning.",
     verified: true,
   },
 ]
 
 const steps = [
   {
-    icon: '🌿',
+    icon: '🌙',
     step: '01',
-    title: 'Apply',
-    description: 'Use the included brush applicator to apply an even layer of the collagen mask across your face.',
+    title: 'Cleanse',
+    description: 'Start your ritual with a clean canvas. Wash your face and pat dry before applying any products.',
   },
   {
     icon: '💧',
     step: '02',
-    title: 'Wait',
-    description: 'Relax for 15–20 minutes while the collagen formula works deep into your skin.',
+    title: 'Treat',
+    description: 'Apply your chosen Dewori treatment. Let the Korean-inspired formula work deep into your skin overnight.',
   },
   {
     icon: '✨',
     step: '03',
     title: 'Glow',
-    description: 'Slowly peel off the mask and gently pat any remaining serum into your skin. No rinsing needed, just glow.',
+    description: 'Wake up to visibly brighter, more hydrated skin. Consistent nightly rituals create lasting results.',
   },
 ]
 
 export default async function HomePage() {
-  let bundles = fallbackBundles
-  try {
-    const products = await getProducts()
-    const main = products.find((p) => p.title !== 'Mask') ?? products[0]
-    if (main) {
-      const variantBundles = variantsToBundles(main)
-      if (variantBundles.length > 0) bundles = variantBundles
-    }
-  } catch {
-    // Keep fallback if Shopify is unreachable
-  }
-
   return (
     <>
       {/* HERO */}
       <section className="gradient-night overflow-hidden relative">
-        {/* Scattered stars */}
         <TwinkleStar top="12%" left="8%"  size={5} opacity={0.35} />
         <TwinkleStar top="22%" left="55%" size={4} opacity={0.25} />
         <TwinkleStar top="8%"  left="78%" size={6} opacity={0.30} />
@@ -113,7 +65,7 @@ export default async function HomePage() {
               <span className="italic text-amber">Different.</span>
             </h1>
             <p className="text-glow/60 text-lg leading-relaxed max-w-md mb-8">
-              Korean collagen face mask for your nightly skin ritual. Apply, wait, and peel away to reveal your glow.
+              Your nightly Korean skincare ritual, simplified. Premium tools and treatments designed to help you wake up glowing every morning.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
               <Link href="/shop" className="w-full sm:w-auto">
@@ -129,7 +81,7 @@ export default async function HomePage() {
             <div className="relative w-80 h-80 rounded-3xl overflow-hidden shadow-glow ring-1 ring-amber/20">
               <Image
                 src="/hero-model.png"
-                alt="Dewori Collagen Night Mask applied to skin"
+                alt="Dewori Skin nightly ritual"
                 fill
                 priority
                 sizes="320px"
@@ -140,22 +92,21 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* BUNDLE SHOWCASE */}
+      {/* COMING SOON */}
       <section className="section-padding bg-dusk">
-        <div className="container-base">
-          <div className="text-center mb-12">
-            <h2 className="heading-display text-3xl md:text-4xl text-glow mb-3">
-              Find Your Ritual
-            </h2>
-            <p className="text-glow/50 text-base max-w-sm mx-auto">
-              Pick the pack that fits your glow goals. The more you stock up, the more you save.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-4xl mx-auto">
-            {bundles.map((bundle) => (
-              <BundleCard key={bundle.title} {...bundle} />
-            ))}
-          </div>
+        <div className="container-base text-center max-w-2xl mx-auto">
+          <span className="inline-block bg-amber/10 text-amber text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 border border-amber/20">
+            New Collection
+          </span>
+          <h2 className="heading-display text-3xl md:text-4xl text-glow mb-4">
+            Something Beautiful Is Coming
+          </h2>
+          <p className="text-glow/50 text-lg leading-relaxed mb-8">
+            We are curating a collection of premium Korean skincare tools and treatments for your nightly ritual. Launching soon.
+          </p>
+          <Link href="/shop">
+            <Button size="lg">Explore the Shop</Button>
+          </Link>
         </div>
       </section>
 
@@ -164,9 +115,9 @@ export default async function HomePage() {
         <div className="container-base">
           <div className="text-center mb-12">
             <h2 className="heading-display text-3xl md:text-4xl text-glow mb-3">
-              How It Works
+              The Dewori Ritual
             </h2>
-            <p className="text-glow/50 text-base">Three simple steps to your nightly glow ritual.</p>
+            <p className="text-glow/50 text-base">Three steps to glowing skin, every morning.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {steps.map(({ icon, step, title, description }) => (
@@ -228,7 +179,7 @@ export default async function HomePage() {
         <div className="container-base text-center">
           <h2 className="heading-display text-3xl md:text-4xl text-glow mb-4">Ready to Glow?</h2>
           <p className="text-glow/50 mb-8 max-w-sm mx-auto">
-            Join thousands of people who have made the Dewori Skin collagen ritual part of their nightly routine.
+            Join thousands of people who have made the Dewori Skin nightly ritual part of their routine.
           </p>
           <Link href="/shop">
             <Button size="lg">Shop the Collection</Button>
@@ -252,7 +203,6 @@ function TwinkleStar({
       fill="none"
       aria-hidden="true"
     >
-      {/* 4-pointed sparkle */}
       <path
         d={`M${half} 0 L${half * 1.15} ${half * 0.85} L${size} ${half} L${half * 1.15} ${half * 1.15} L${half} ${size} L${half * 0.85} ${half * 1.15} L0 ${half} L${half * 0.85} ${half * 0.85} Z`}
         fill="#E8C49A"
@@ -263,7 +213,7 @@ function TwinkleStar({
 
 function StarIcon() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#C9956A">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#C9956A" aria-hidden="true">
       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
     </svg>
   )

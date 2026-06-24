@@ -5,33 +5,33 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about Dewori Skin — the story behind our Korean collagen night face mask and nightly glow ritual mission.',
+    'Learn about Dewori Skin — the story behind our Korean skincare ritual brand.',
 }
 
 const values = [
   {
     icon: '🌿',
-    title: 'Clean Ingredients',
+    title: 'Thoughtful Curation',
     description:
-      'Every mask is made with thoughtfully sourced, skin-loving ingredients. No harsh chemicals. Just pure hydration.',
+      'Every product we carry is chosen with care. We only stock what we would use ourselves — effective, skin-loving, and worth your time.',
   },
   {
     icon: '💧',
-    title: 'Deep Hydration',
+    title: 'Korean Skincare Science',
     description:
-      'Our proprietary serum blend draws from Korean skincare science to deliver lasting moisture deep into the skin barrier.',
+      'We draw from Korean skincare traditions — one of the most advanced in the world — to bring you products that actually deliver results.',
   },
   {
-    icon: '♻️',
-    title: 'Mindful Packaging',
+    icon: '🌙',
+    title: 'Nighttime First',
     description:
-      'Our pouches are designed to minimize waste. We are actively working toward fully compostable packaging.',
+      'Your skin repairs itself while you sleep. We design our ritual around that — giving your skin what it needs during its most productive hours.',
   },
   {
     icon: '✨',
     title: 'Ritual Over Routine',
     description:
-      'Skincare is not a chore. It is a moment for yourself. We design every product to feel like a small luxury.',
+      'Skincare is not a chore. It is a moment for yourself. We design every product to feel like a small luxury at the end of your day.',
   },
 ]
 
@@ -63,18 +63,19 @@ export default function AboutPage() {
             <h2 className="heading-display text-3xl text-glow">Where It Started</h2>
             <p className="text-glow/60 leading-relaxed text-lg">
               The idea for Dewori Skin started with a late-night skincare session and a realization:
-              the Korean collagen face masks we had fallen in love with on trips abroad were impossible to
-              find at home. And when you did find them, they were expensive, hard to stock up on,
-              or came in overwhelming variety.
+              Korean skincare — one of the most innovative and effective traditions in the world — was
+              either hard to find, overpriced, or buried under overwhelming options that made it
+              impossible to know where to start.
             </p>
             <p className="text-glow/60 leading-relaxed text-lg">
-              We wanted something simple. One mask. Done beautifully. A collagen night face mask with the same
-              deep-hydration science that Korean skincare is known for, formulated for a nightly ritual,
-              not just a special occasion. And it comes with a professional brush applicator, so every
-              application feels intentional.
+              We wanted to change that. Dewori Skin is a curated collection of Korean-inspired skincare
+              tools and treatments built around one idea: your nightly ritual should feel effortless,
+              luxurious, and actually work. No confusion, no 12-step overwhelm. Just the right products
+              for your skin, every night.
             </p>
             <p className="text-glow/60 leading-relaxed text-lg">
-              So we made it. Dewori Skin is that mask.
+              We are a small brand that cares deeply about what we put in front of our customers.
+              Everything we sell is something we believe in.
             </p>
           </div>
         </div>
@@ -119,7 +120,7 @@ export default function AboutPage() {
             Start Your Ritual Tonight
           </h2>
           <p className="text-glow/50 mb-8">
-            Your nightly glow ritual is one collagen mask away.
+            Explore our collection of Korean skincare tools and treatments.
           </p>
           <Link href="/shop">
             <Button size="lg">Shop the Collection</Button>

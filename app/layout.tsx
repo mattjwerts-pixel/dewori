@@ -23,16 +23,16 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Dewori Skin — Korean Collagen Night Face Mask",
+    default: "Dewori Skin — Korean Skincare Ritual",
     template: "%s | Dewori Skin",
   },
   description:
-    "Your nightly glow ritual. Premium Korean collagen night face mask with professional brush applicator.",
-  keywords: ["Korean skincare", "collagen mask", "face mask", "K-beauty", "Dewori Skin", "peel off mask"],
+    "Your nightly glow ritual. Premium Korean skincare tools and treatments for glowing skin every morning.",
+  keywords: ["Korean skincare", "K-beauty", "Dewori Skin", "skincare ritual", "glow", "nighttime skincare"],
   metadataBase: new URL("https://dewori.store"),
   openGraph: {
-    title: "Dewori Skin — Korean Collagen Night Face Mask",
-    description: "Your nightly glow ritual. Premium Korean collagen night face mask with professional brush applicator.",
+    title: "Dewori Skin — Korean Skincare Ritual",
+    description: "Your nightly glow ritual. Premium Korean skincare tools and treatments for glowing skin every morning.",
     type: "website",
     url: "https://dewori.store",
   },
