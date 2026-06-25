@@ -44,10 +44,6 @@ export default function VariantCard({
     currency: 'USD',
   }).format(price)
 
-  const tubeLabel = tubeCount === 1
-    ? '1 tube (75ml) + brush'
-    : `${tubeCount} tubes (${tubeCount * 75}ml) + brush`
-
   // Scale tube size down slightly when there are more of them
   const tubeW = tubeCount === 1 ? 82 : tubeCount === 2 ? 70 : 60
   const tubeH = tubeCount === 1 ? 210 : tubeCount === 2 ? 195 : 180
