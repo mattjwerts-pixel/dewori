@@ -21,8 +21,8 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-2">
             <p className="font-display text-2xl font-bold text-glow mb-2">Dewori Skin</p>
             <p className="text-glow/40 text-sm leading-relaxed max-w-xs">
-              Your nightly glow ritual. Premium Korean collagen face mask crafted
-              for real results. Apply, peel, reveal your glow.
+              Your nightly glow ritual. Premium Korean skincare tools and treatments
+              for glowing skin every morning.
             </p>
 
             <div className="flex items-center gap-3 mt-6">
