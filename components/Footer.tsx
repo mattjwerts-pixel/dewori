@@ -26,9 +26,9 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-3 mt-6">
-              <SocialLink href="#" label="Instagram"><InstagramIcon /></SocialLink>
-              <SocialLink href="#" label="TikTok"><TikTokIcon /></SocialLink>
-              <SocialLink href="#" label="Pinterest"><PinterestIcon /></SocialLink>
+              <SocialLink href="https://www.instagram.com/deworiskincare?igsh=aGtiN25uZTkxaXV6" label="Instagram"><InstagramIcon /></SocialLink>
+              <SocialLink href="https://www.tiktok.com/@dewori83?_r=1&_t=ZT-97W8CxhLBXy" label="TikTok"><TikTokIcon /></SocialLink>
+              <SocialLink href="https://www.facebook.com/profile.php?id=61590997122382" label="Facebook"><FacebookIcon /></SocialLink>
             </div>
           </div>
 
@@ -120,10 +120,10 @@ function TikTokIcon() {
   )
 }
 
-function PinterestIcon() {
+function FacebookIcon() {
   return (
     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+      <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.428c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
     </svg>
   )
 }
