@@ -193,7 +193,7 @@ export default function CartPage() {
               </div>
 
 
-              <a href={cart!.checkoutUrl} className="block w-full">
+              <a href={cart!.checkoutUrl.replace('dewori.store', '0z91ps-ba.myshopify.com')} className="block w-full">
                 <Button size="lg" className="w-full">
                   Checkout →
                 </Button>
