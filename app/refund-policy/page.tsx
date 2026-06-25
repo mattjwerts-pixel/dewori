@@ -23,11 +23,9 @@ export default function RefundPolicyPage() {
           <section>
             <h2 className="heading-display text-xl text-glow mb-3">No Returns</h2>
             <p>
-              Due to the nature of our products — skincare items that come into direct contact
-              with skin — <strong className="text-glow">we do not accept returns under any
-              circumstances.</strong> All sales are final. We are unable to resell opened or
-              used skincare products, and for hygiene reasons we cannot accept items back once
-              they have left our fulfillment center.
+              Due to the nature of our products, <strong className="text-glow">we do not accept
+              returns under any circumstances.</strong> All sales are final. For hygiene and
+              safety reasons we cannot accept items back once they have left our fulfillment center.
             </p>
           </section>
 
