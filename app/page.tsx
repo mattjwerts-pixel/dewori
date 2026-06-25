@@ -92,20 +92,20 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* COMING SOON */}
+      {/* FEATURED PRODUCTS */}
       <section className="section-padding bg-dusk">
         <div className="container-base text-center max-w-2xl mx-auto">
           <span className="inline-block bg-amber/10 text-amber text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 border border-amber/20">
-            New Collection
+            The Collection
           </span>
           <h2 className="heading-display text-3xl md:text-4xl text-glow mb-4">
-            Something Beautiful Is Coming
+            Build Your Ritual
           </h2>
           <p className="text-glow/50 text-lg leading-relaxed mb-8">
-            We are curating a collection of premium Korean skincare tools and treatments for your nightly ritual. Launching soon.
+            Premium Korean skincare tools and treatments — curated for your nightly glow ritual. Free shipping on every order.
           </p>
           <Link href="/shop">
-            <Button size="lg">Explore the Shop</Button>
+            <Button size="lg">Shop the Collection</Button>
           </Link>
         </div>
       </section>
