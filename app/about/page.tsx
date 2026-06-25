@@ -63,7 +63,7 @@ export default function AboutPage() {
             <h2 className="heading-display text-3xl text-glow">Where It Started</h2>
             <p className="text-glow/60 leading-relaxed text-lg">
               The idea for Dewori Skin started with a late-night skincare session and a realization:
-              Korean skincare — one of the most innovative and effective traditions in the world — was
+              Korean skincare, one of the most innovative and effective traditions in the world, was
               either hard to find, overpriced, or buried under overwhelming options that made it
               impossible to know where to start.
             </p>
